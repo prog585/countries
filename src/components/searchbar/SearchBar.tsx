@@ -1,9 +1,6 @@
 import React from 'react';
 import {
-  Box,
-  Divider,
   FormControl,
-  Grid,
   IconButton,
   InputBase,
   MenuItem,
