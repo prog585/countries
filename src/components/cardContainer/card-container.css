@@ -1,0 +1,18 @@
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 2px, 4px, #eee;
+  padding: 1.5rem 3.5rem;
+}
+@media only screen and (max-width: 700px) {
+  .card-container {
+    margin-left: '0px';
+  }
+  .grid-item {
+    margin: auto;
+  }
+  .css-1gmydat-MuiGrid-root {
+    margin: auto;
+  }
+}

@@ -1,0 +1,24 @@
+.searchbar-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: 1px, 2px, #bbb;
+  padding: 1.5rem 3.5rem;
+}
+.region-container {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 700px) {
+  .searchbar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1.5rem 1.25rem;
+  }
+  .region-container {
+    margin-top: 20px;
+  }
+}
