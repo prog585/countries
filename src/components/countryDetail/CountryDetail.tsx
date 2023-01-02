@@ -4,6 +4,16 @@ import { Grid, Typography } from '@mui/material';
 import ICountry from '../../interfaces/CountryInterface';
 import CountryBorders from '../countryBorders/CountryBorders';
 const CountryDetail = (props: ICountry) => {
+  const languages = props.languages?.map((lan: { name: string }, i) => {
+    const langCount = props.languages ? props.languages.length : 0;
+    const sep = i === langCount - 1 ? '' : ', ';
+    return `${lan.name + sep}`;
+  });
+  const currencies = props.currencies?.map((lan: { name: string }, i) => {
+    const langCount = props.currencies ? props.currencies.length : 0;
+    const sep = i === langCount - 1 ? '' : ', ';
+    return `${lan.name + sep}`;
+  });
   return (
     <>
       <Grid container spacing={4} sx={{ width: '100%', marginLeft: 'auto' }}>
@@ -25,13 +35,13 @@ const CountryDetail = (props: ICountry) => {
               <span className="label">Population:</span> {props.population}
             </Grid>
             <Grid item xs={12} md={6}>
-              <span className="label">Currencies:</span> {props.currencies?.join(',')}
+              <span className="label">Currencies:</span> {currencies}
             </Grid>
             <Grid item xs={12} md={6}>
               <span className="label">Region:</span> {props.region}
             </Grid>
             <Grid item xs={12} md={6}>
-              <span className="label">Languages:</span> {props.languages?.join(',')}
+              <span className="label">Languages:</span> {languages}
             </Grid>
             <Grid item xs={12} md={12}>
               <span className="label">Sub Region:</span> {props.subregion}
